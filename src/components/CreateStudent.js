@@ -20,15 +20,15 @@ const CreateStudent = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:8000/api/v1/auth/signup", formData)
-      .then((response) => {
-        console.log("Created successful:", response.data);
-        alert("succesfully created!");
-      })
-      .catch((error) => {
-        console.error("Error creating:", error);
-        alert("Error username already existed ");
-      });
+			.post("https://adminbackend-xi.vercel.app/api/v1/auth/signup", formData)
+			.then((response) => {
+				console.log("Created successful:", response.data);
+				alert("succesfully created!");
+			})
+			.catch((error) => {
+				console.error("Error creating:", error);
+				alert("Error username already existed ");
+			});
   };
 
   return (

@@ -20,15 +20,15 @@ const Signup = ({ handleAuthentication }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:8000/api/v1/user/signup", formData)
-      .then((response) => {
-        console.log("Signup successful:", response.data);
-        handleAuthentication();
-        history("/signin"); // Redirect to home page after successful signup
-      })
-      .catch((error) => {
-        console.error("Error signing up:", error);
-      });
+			.post("https://adminbackend-xi.vercel.app/api/v1/user/signup", formData)
+			.then((response) => {
+				console.log("Signup successful:", response.data);
+				handleAuthentication();
+				history("/signin"); // Redirect to home page after successful signup
+			})
+			.catch((error) => {
+				console.error("Error signing up:", error);
+			});
   };
 
   return (
