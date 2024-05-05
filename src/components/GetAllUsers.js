@@ -21,7 +21,7 @@ const GetAllUser = () => {
   const handleDelete = async (_id) => {
     try {
       await axios.delete(
-				`https://adminbackend-xi.vercel.app/api/v1/auth/users/${_id}`
+				`https://adminbackend-l3ov8xuex-atharvasharma12s-projects.vercel.app/api/v1/auth/users/${_id}`
 			);
       fetchUsers(); // Refresh user data after delete
     } catch (error) {

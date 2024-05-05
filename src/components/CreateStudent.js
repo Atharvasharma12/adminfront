@@ -20,7 +20,7 @@ const CreateStudent = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-			.post("https://adminbackend-xi.vercel.app/api/v1/auth/signup", formData)
+			.post(`${process.env.BACKENDURL}/api/v1/auth/signup`, formData)
 			.then((response) => {
 				console.log("Created successful:", response.data);
 				alert("succesfully created!");

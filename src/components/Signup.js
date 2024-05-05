@@ -20,7 +20,10 @@ const Signup = ({ handleAuthentication }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-			.post("https://adminbackend-xi.vercel.app/api/v1/user/signup", formData)
+			.post(
+				`https://adminbackend-l3ov8xuex-atharvasharma12s-projects.vercel.app/api/v1/user/signup`,
+				formData
+			)
 			.then((response) => {
 				console.log("Signup successful:", response.data);
 				handleAuthentication();
